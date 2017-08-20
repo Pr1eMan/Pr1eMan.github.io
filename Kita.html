@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Baldai">
+<meta name="keywords" content="Baldai, baldu gamyba">
+<meta name="author" content="Gabrielius Kojelis">
+	<title>Orneto Baldai</title>
+	<link rel="stylesheet"  href="./css/style.css">
+</head>
+<body>
+	<section id="NuotraukaDidele">
+		<div class="container">
+		
+		</div>
+	</section>
+	<header>
+		<div class="container">
+			
+			<nav>
+		<ul>
+			<li ><a href="index.html">Pradžia</a> </li>
+			<li ><a href="VirtuvesBaldai.html">Virtuvės Baldai</a> </li>
+			<li ><a href="Spintos.html">Spintos</a> </li>
+			<li ><a href="MiegamojoBaldai.html">Miegamojo Baldai</a> </li>
+			<li ><a href="SvetainesBaldai.html">Svetainės Baldai</a> </li>
+			<li class="current" ><a href="Kita.html">Kita</a> </li>
+			<li ><a href="Kontaktai.html">Kontaktai</a> </li>
+		</ul>
+	</nav>
+		</div>
+	</header>
+	<section id="aplinka">
+	<div id="container">
+		<img class="slider" src="./KitaImages/1.jpg">
+		<img class="slider" src="./KitaImages/2.jpg">
+		<img class="slider" src="./KitaImages/3.jpg">
+		<img class="slider" src="./KitaImages/4.jpg">
+		<img class="slider" src="./KitaImages/5.jpg">
+		<img class="slider" src="./KitaImages/6.jpg">
+		<img class="slider" src="./KitaImages/7.jpg">
+		<img class="slider" src="./KitaImages/8.jpg">
+		<img class="slider" src="./KitaImages/9.jpg">
+		<img class="slider" src="./KitaImages/10.jpg">
+		<img class="slider" src="./KitaImages/11.jpg">
+		<img class="slider" src="./KitaImages/12.jpg">
+		<img class="slider" src="./KitaImages/13.jpg">
+		<img class="slider" src="./KitaImages/14.jpg">
+		<img class="slider" src="./KitaImages/15.jpg">
+		<img class="slider" src="./KitaImages/16.jpg">
+		<img class="slider" src="./KitaImages/17.jpg">
+		<img class="slider" src="./KitaImages/18.jpg">
+		<img class="slider" src="./KitaImages/19.jpg">
+		<img class="slider" src="./KitaImages/20.jpg">
+
+		<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+		<button class="btn" onclick="plusIndex(1)" id="btn2">  &#10095;</button>
+	</div>
+</section>
+		<footer>
+			<p>OrnetoBaldai.lt &copy; 2017 visos teisės saugomos.</p>
+		</footer>
+</body>
+<script>
+	var index=1;
+	function plusIndex (n){
+		index =index +1;
+		showImage(index);
+	}
+	showImage(1);
+	function showImage (n){
+		var x=document.getElementsByClassName("slider");
+		if (n > x.length) {
+			index = 1
+		};
+				if (n < 1) {
+			index = x.length
+		};
+		for (i=0; i<x.length; i++){
+			x[i].style.display ="none"
+		}
+		x[index-1].style.display= "block";
+	}
+</script>
+</html>
