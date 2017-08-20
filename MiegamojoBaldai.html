@@ -6,6 +6,7 @@
 <meta name="description" content="Baldai">
 <meta name="keywords" content="Baldai, baldu gamyba">
 <meta name="author" content="Gabrielius Kojelis">
+<meta name="viewport" content="width=device-width initial-scale=1">
 	<title>Orneto Baldai</title>
 	<link rel="stylesheet"  href="./css/style.css">
 </head>
@@ -74,4 +75,20 @@
 		x[index-1].style.display= "block";
 	}
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$('span.nav-btn').click(function () {
+
+				$('ul.navigacija').slideToggle();	
+
+			})
+			$(window).resize(function(){
+
+				if ($(window).width()>1186) {
+
+					$('ul.navigacija').removeAttr('style');
+				}
+
+			})
+		</script>
 </html>
